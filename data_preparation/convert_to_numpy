@@ -1,1 +1,21 @@
+import scipy.io
+import numpy as np
 
+# Load MATLAB file
+data = scipy.io.loadmat("emg_segments.mat")
+
+segments = data['segments']
+labels = data['segment_labels'].flatten()
+
+# Convert to (samples, channels, timesteps)
+X = np.transpose(segments, (2,0,1))
+
+# Binary classification (Grip vs No Grip)
+GRIP_GESTURE = 2
+binary_labels = np.where(labels == GRIP_GESTURE, 1, 0)
+
+np.save("data/emg_signals.npy", X)
+np.save("data/labels.npy", binary_labels)
+
+print("Shape:", X.shape)
+print("Labels:", np.unique(binary_labels))
