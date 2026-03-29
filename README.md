@@ -10,7 +10,8 @@ When the battery level falls below predefined thresholds, the system automatical
 
 By combining adaptive EMG interpretation, embedded spike-based classification, wireless charging capability, and intelligent energy monitoring with remote alerting, this project demonstrates a compact, connected, and energy-aware prosthetic platform suitable for advanced assistive and rehabilitation applications.
 
-#EMG-SNN-Prosthetic
+
+EMG-SNN-Prosthetic
 An intelligent prosthetic arm control system using Electromyography (EMG) signals and a Spiking Neural Network (SNN).
 
 Built on the STM32MP257F-DK platform, the system performs:
